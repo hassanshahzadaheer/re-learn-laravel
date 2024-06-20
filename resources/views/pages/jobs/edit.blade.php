@@ -1,7 +1,7 @@
 <x-layout>
-    <x-slot:heading>
+    <x-slot name="heading">
         Edit Job: {{ $job->title }}
-    </x-slot:heading>
+    </x-slot>
 
     <div class="bg-white shadow sm:rounded-lg p-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -20,6 +20,18 @@
                     <h2 class="text-lg font-medium leading-6 text-gray-900">Shift</h2>
                     <p class="mt-1 text-sm text-gray-600">Select the shift type for this job.</p>
                 </div>
+
+                <!-- Delete Form -->
+                <form id="deleteForm" method="POST" action="/jobs/{{ $job->id }}" class="flex justify-start">
+                    @csrf
+                    @method('DELETE')
+                    <button
+                        type="submit"
+                        class="rounded-md bg-red-600  px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                    >
+                        Delete
+                    </button>
+                </form>
             </div>
 
             <!-- Right Side: Input Fields and Buttons -->
@@ -78,18 +90,6 @@
                             </button>
                         </div>
                     </div>
-                </form>
-
-                <!-- Delete Form -->
-                <form id="deleteForm" method="POST" action="/jobs/{{ $job->id }}" class="mt-6 flex justify-end space-x-4">
-                    @csrf
-                    @method('DELETE')
-                    <button
-                        type="submit"
-                        class="rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                    >
-                        Delete
-                    </button>
                 </form>
             </div>
         </div>
