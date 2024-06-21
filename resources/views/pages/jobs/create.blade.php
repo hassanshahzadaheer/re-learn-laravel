@@ -33,7 +33,7 @@
                                 name="title"
                                 id="title"
                                 placeholder="CEO"
-                                required
+
                                 class="block w-full rounded-md border border-gray-300 py-2 px-3 text-base focus:border-indigo-500 focus:ring-indigo-500"
                             />
                             <x-form-error name="title"/>
@@ -44,8 +44,8 @@
                                 type="text"
                                 name="salary"
                                 id="salary"
-                                placeholder="100000"
-                                required
+                                placeholder="$10,0000 USD"
+
                                 class="block w-full rounded-md border border-gray-300 py-2 px-3 text-base focus:border-indigo-500 focus:ring-indigo-500"
                             />
                             <x-form-error name="salary"/>
@@ -67,12 +67,7 @@
 
                         <div class="mt-6 flex justify-end space-x-4">
                             <a href="/jobs" class="rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">Cancel</a>
-                            <button
-                                type="submit"
-                                class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                            >
-                                Save
-                            </button>
+                            <x-form-button>Save</x-form-button>
                         </div>
                     </div>
                 </form>
