@@ -8,7 +8,6 @@ Route::view('/', 'pages.home');
 Route::view('/contact', 'pages.contact');
 Route::resource('jobs',JobController::class);
 
-Route::get('/register',RegisterUserController::class);
 
 
 
