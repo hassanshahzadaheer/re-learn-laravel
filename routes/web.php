@@ -10,6 +10,8 @@ Route::resource('jobs',JobController::class);
 
 
 Route::get('/register',[RegisterUser::class,'create']);
+Route::post('/register',[RegisterUser::class,'store']);
+
 Route::get('/login',[RegisterUser::class,'login']);
 
 
