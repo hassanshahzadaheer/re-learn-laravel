@@ -34,7 +34,7 @@
                                 id="title"
                                 placeholder="CEO"
 
-                                class="block w-full rounded-md border border-gray-300 py-2 px-3 text-base focus:border-indigo-500 focus:ring-indigo-500"
+                               
                             />
                             <x-form-error name="title"/>
                         </div>
@@ -46,7 +46,7 @@
                                 id="salary"
                                 placeholder="$10,0000 USD"
 
-                                class="block w-full rounded-md border border-gray-300 py-2 px-3 text-base focus:border-indigo-500 focus:ring-indigo-500"
+                                
                             />
                             <x-form-error name="salary"/>
                         </div>

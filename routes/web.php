@@ -9,7 +9,8 @@ Route::view('/contact', 'pages.contact');
 Route::resource('jobs',JobController::class);
 
 
-Route::view('/register','auth.register');
+Route::get('/register',[RegisterUser::class,'create']);
+Route::get('/login',[RegisterUser::class,'login']);
 
 
 
