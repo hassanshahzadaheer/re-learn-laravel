@@ -9,7 +9,7 @@ Route::view('/contact', 'pages.contact');
 Route::resource('jobs',JobController::class);
 
 
-Route::view('/register','pages.register');
+Route::view('/register','auth.register');
 
 
 

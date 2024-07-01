@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RegisterUser extends Controller
 {
     public function index() {
-        return "updated";
+        return view('auth.register');
     }
 }
