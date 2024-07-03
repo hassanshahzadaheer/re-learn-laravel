@@ -9,7 +9,7 @@
             <div class="sm:col-span-2">
                 <x-form-label for="email">Email</x-form-label>
                 <div class="mt-2.5">
-                    <x-form-input type="email" name="email" id="email" autocomplete="email" placeholder="example@example.com" />
+                    <x-form-input type="email" name="email" id="email" autocomplete="email" value="{{old('email')}}" placeholder="example@example.com" />
                     <x-form-error name="email" />
                 </div>
             </div>

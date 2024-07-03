@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Auth;
-Use Illuminate\Validation\Rules\Password;
+
+use Illuminate\Validation\ValidationException;
 
 class SessionController extends Controller
 {
@@ -24,7 +23,11 @@ class SessionController extends Controller
         ]
        );
    
-       Auth::attempt($attributes);
+       if(!Auth::attempt($attributes)) {
+        throw ValidationException::withMessages([
+            'email' => 'Sorry, those credentials do not match.'
+        ]);
+       }
        
        request()->session()->regenerate();
 
