@@ -13,7 +13,5 @@ class RegisterUser extends Controller
     public function store(Request $request) {
         dd($request->all());
     }
-    public function login() {
-        return view('auth.login');
-    }
+  
 }

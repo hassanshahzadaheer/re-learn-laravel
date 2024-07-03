@@ -3,7 +3,8 @@
         Login
     </x-slot:heading>
 
-    <form action="#" method="POST" class="mx-auto mt-8 max-w-xl sm:mt-20">
+    <form action="/login" method="POST" class="mx-auto mt-8 max-w-xl sm:mt-20">
+        @csrf
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div class="sm:col-span-2">
                 <x-form-label for="email">Email</x-form-label>
