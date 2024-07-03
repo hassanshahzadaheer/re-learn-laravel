@@ -35,10 +35,10 @@
                 </div>
             </div>
             <div>
-                <x-form-label for="confirm-pass">Confirm Password</x-form-label>
+                <x-form-label for="password_confirmation">Confirm Password</x-form-label>
                 <div class="mt-2.5">
-                    <x-form-input type="password" name="confirm-pass" id="confirm-pass" autocomplete="new-password" />
-                    <x-form-error name="confirm-pass" />
+                    <x-form-input type="password" name="password_confirmation" id="password_confirmation" autocomplete="new-password" />
+                    <x-form-error name="password_confirmation" />
                 </div>
             </div>
         </div>
