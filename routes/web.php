@@ -6,8 +6,6 @@ use App\Http\Controllers\RegisterUser;
 use App\Http\Controllers\SessionController;
 
 
-
-
 Route::view('/', 'pages.home');
 Route::view('/contact', 'pages.contact');
 
@@ -19,7 +17,7 @@ Route::get('/jobs/{job}', [JobController::class, 'show'])->name('jobs.show');
 Route::get('/jobs/{job}/edit', [JobController::class, 'edit'])->name('jobs.edit')
         ->middleware('auth')
         ->can('edit', 'job');
-Route::put('/jobs/{job}', [JobController::class, 'update'])->name('jobs.update');
+Route::patch('/jobs/{job}', [JobController::class, 'update'])->name('jobs.update');
 Route::delete('/jobs/{job}', [JobController::class, 'destroy'])->name('jobs.destroy');
 
 
