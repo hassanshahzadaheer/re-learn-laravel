@@ -4,9 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisterUser;
 use App\Http\Controllers\SessionController;
+use App\Jobs\TranslateJob;
+use App\Models\Job;
 
+Route::get('/test-queue', function () {
 
-
+        $job = Job::first();
+        TranslateJob::dispatch($job);
+        return "Check your log file.";
+});
 
 Route::view('/', 'pages.home');
 Route::view('/contact', 'pages.contact');
