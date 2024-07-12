@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Re learn Laravel</title>
     @vite(['resources/js/app.js'])
 
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white font-hanken-grotesk">
 
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
@@ -47,7 +48,7 @@
         </nav>
     </div>
 
-    <main class="mx-auto max-w-9x6 py-6 sm:px-6 lg:px-8">
+    <main class="max-w-9x6 mx-auto py-4 sm:px-6 lg:px-8">
         {{ $slot }}
     </main>
 

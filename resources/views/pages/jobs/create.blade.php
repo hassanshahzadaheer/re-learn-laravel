@@ -28,41 +28,23 @@
                     @csrf
                     <div class="space-y-6">
                         <div>
-                            <x-form-input
-                                type="text"
-                                name="title"
-                                id="title"
-                                placeholder="CEO"
-
-                               
-                            />
-                            <x-form-error name="title"/>
+                            <x-form-input type="text" name="title" id="title" placeholder="CEO" />
+                            <x-form-error name="title" />
                         </div>
 
                         <div>
-                            <x-form-input
-                                type="text"
-                                name="salary"
-                                id="salary"
-                                placeholder="$10,0000 USD"
-
-                                
-                            />
-                            <x-form-error name="salary"/>
+                            <x-form-input type="text" name="salary" id="salary" placeholder="$10,0000 USD" />
+                            <x-form-error name="salary" />
                         </div>
 
                         <div>
-                            <select
-                                id="shift"
-                                name="shift"
-                                class="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:ring-indigo-500"
-                            >
+                            <select id="shift" name="shift" class="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:ring-indigo-500">
                                 <option value="">Select Shift</option>
                                 <option>Full Time</option>
                                 <option>Part Time</option>
                                 <option>Contract</option>
                             </select>
-                            <x-form-error name="shift"/>
+                            <x-form-error name="shift" />
                         </div>
 
                         <div class="mt-6 flex justify-end space-x-4">

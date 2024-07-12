@@ -1,51 +1,40 @@
 <x-layout>
-    <section>
-        <h1>Top Jobs</h1>
+    <div class="space-y-10">
+        <section>
+            <x-section-heading> Feature Jobs </x-section-heading>
+            <div class="grid lg:grid-cols-3 gap-8 mt-6">
+                <x-job-card-small />
+                <x-job-card-small />
+                <x-job-card-small />
+            </div>
+        </section>
 
-        <div class="flex flex-row justify-between item-center">
+        <section>
+            <x-section-heading> Tags </x-section-heading>
 
-          <x-small-card></x-small-card>
-
-
-            <div class="p-4 bg-white/5 rounded-xl flex  flex-col text-center">
-
-                <div class="self-start text-sm">Company</div>
-                <div class="py-8 font-bold">
-                    <h3>Full Stack Developer</h3>
-                    <p>Full time - From $60,000 </p>
-                </div>
-                <div class="flex flex-row justify-between item-center mt-auto ">
-                    <div class="">
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Front End</a>
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Back End</a>
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Full stack</a>
-                    </div>
-
-                    <img src="https://placehold.co/42x42/png" alt="placeholder">
-                </div>
-
+            <div class="mt-6 space-x-1">
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
+                <x-tag>Tags </x-tag>
             </div>
 
-            <div class="p-4 bg-white/5 rounded-xl flex  flex-col text-center">
+        </section>
+        <section>
+            <x-section-heading> All Jobs </x-section-heading>
 
-                <div class="self-start text-sm">Company</div>
-                <div class="py-8 font-bold">
-                    <h3>Full Stack Developer</h3>
-                    <p>Full time - From $60,000 </p>
-                </div>
-                <div class="flex flex-row justify-between item-center mt-auto ">
-                    <div class="">
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Front End</a>
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Back End</a>
-                        <a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">Full stack</a>
-                    </div>
-
-                    <img src="https://placehold.co/42x42/png" alt="placeholder">
-                </div>
-
+            <div class="mt-6 space-y-6">
+                <x-job-card-wide />
+                <x-job-card-wide />
+                <x-job-card-wide />
             </div>
-        </div>
 
 
-    </section>
+        </section>
+    </div>
 </x-layout>
