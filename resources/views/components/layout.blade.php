@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@400;500;600&display=swap" rel="stylesheet">
 
     <title>Re learn Laravel</title>
     @vite(['resources/js/app.js'])
@@ -48,8 +48,10 @@
         </nav>
     </div>
 
-    <main class="max-w-9x6 mx-auto py-4 sm:px-6 lg:px-8">
-        {{ $slot }}
+    <main>
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            {{ $slot }}
+        </div>
     </main>
 
 </body>

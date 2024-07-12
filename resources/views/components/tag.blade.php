@@ -1,1 +1,1 @@
-<a href="#" class="bg-white/10 px-2 py-2 hover:bg-white/25 rounded-xl text-xs transition-colors duration:200">{{$slot}}</a>
+<a href="#" class="bg-white/10 px-3 py-3 hover:bg-white/25 rounded-xl text-2xs font-bold transition-colors duration:300">{{$slot}}</a>
