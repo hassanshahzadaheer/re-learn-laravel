@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\JobPosted;
 
@@ -10,8 +11,14 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs = Job::with('employer')->latest()->simplePaginate(6);
-        return view('pages.jobs.index', ['jobs' => $jobs]);
+        $jobs = Job::with('employer','tags')->latest()->simplePaginate(6);
+        $tags = Tag::all();
+        return view('pages.home',
+            [
+                'jobs' => $jobs,
+                'tags' => $tags
+
+            ]);
     }
 
     public function show(Job $job)
@@ -27,7 +34,7 @@ class JobController extends Controller
         $job = Job::create([
             'title' => request()->title, 'salary' => request()->salary, 'time' => request()->shift, 'employer_id' => 1
         ]);
-        
+
         Mail::to($job->employer->user)->queue(
             new JobPosted($job)
         );

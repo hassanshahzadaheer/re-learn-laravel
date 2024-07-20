@@ -14,7 +14,7 @@ Route::get('/test-queue', function () {
         return "Check your log file.";
 });
 
-Route::view('/', 'pages.home');
+Route::get('/', [JobController::class, 'index']);
 Route::view('/contact', 'pages.contact');
 
 
