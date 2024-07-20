@@ -18,14 +18,17 @@ class CreateJobListingsTagsAndJobTagTables extends Migration
             $table->foreignIdFor(\App\Models\Employer::class);
             $table->string('title');
             $table->string('salary');
-            $table->string('time');
+            $table->string('location');
+            $table->string('time')->default('Full Time');
+            $table->string('url');
+            $table->string('featured')->default(false);
             $table->timestamps();
         });
 
         // Create the tags table
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->timestamps();
         });
 

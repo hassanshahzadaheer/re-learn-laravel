@@ -20,8 +20,11 @@ class JobFactory extends Factory
         return [
             'title' => fake()->jobTitle(),
             'employer_id' => Employer::factory(),
-            'salary' => '$50,000 USD',
-            'time' => fake()->time()
+            'salary' => fake()->randomElement([ '$50,000 USD','$30,000 USD','$20,000 USD']),
+            'location' => fake()->streetAddress(),
+            'time' => 'Remote',
+            'url' => fake()->url,
+            'featured' => false
         ];
     }
 }
