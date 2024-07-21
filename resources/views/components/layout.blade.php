@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@400;500;600&display=swap" rel="stylesheet">
-
-    <title>Re learn Laravel</title>
+    <link rel="icon" href="{{ Vite::asset('resources/images/fav.png') }}" type="image/x-icon">
+    <title>Aheer Jobs Center</title>
     @vite(['resources/js/app.js'])
 
 </head>
