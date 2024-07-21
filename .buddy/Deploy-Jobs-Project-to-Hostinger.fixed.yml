@@ -4,3 +4,22 @@
     refs:
     - "refs/heads/main"
   fail_on_prepare_env_warning: true
+  actions:
+  - action: "[217.196.54.211] Execute "
+    type: "SSH_COMMAND"
+    working_directory: "/home/u358597111/domains/aheer.me/public_html/jobs"
+    login: "u358597111"
+    password: "secure!uOqroiqWaDp2q3sTpTFrUA==.0Aku07X6gn0f/b/7JuoY0w=="
+    host: "217.196.54.211"
+    port: "65002"
+    commands:
+    - "cd /home/u358597111/domains/aheer.me/public_html/jobs"
+    - "git pull origin main"
+    - "php composer.phar install --no-dev --optimize-autoloader"
+    - ""
+    - "php artisan migrate --force"
+    - "php artisan config:cache"
+    - "php artisan route:cache"
+    - "php artisan view:cache"
+    - ""
+    run_as_script: true
