@@ -3,7 +3,7 @@
     <div class="space-y-10">
 
         <section class="text-center pt-6">
-            <h1 class="font-bold text-4xl">Let's Find Your Next Job</h1>
+            <h1 class="font-bold text-4xl">Let's Find Job For You</h1>
             <form action="#" class="mt-6" >
                 <input class="rounded-xl px-4 py-4 w-full max-w-xl bg-white/5" type="text" id="search" name="search" placeholder="Full time developer">
             </form>
